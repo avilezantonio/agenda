@@ -1,7 +1,7 @@
 package com.hcl.agenda.model.dao;
 
-import com.hcl.agenda.PersistenceUtil;
-import com.hcl.agenda.mode.po.Contact;
+import com.hcl.agenda.model.po.Contact;
+import com.hcl.agenda.util.PersistenceUtil;
 
 public class ContactDAO extends GenericDAO<Contact> {
 

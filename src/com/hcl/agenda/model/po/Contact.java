@@ -1,4 +1,4 @@
-package com.hcl.agenda.mode.po;
+package com.hcl.agenda.model.po;
 
 import java.util.List;
 

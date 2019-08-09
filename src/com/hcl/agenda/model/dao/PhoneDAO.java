@@ -1,7 +1,7 @@
 package com.hcl.agenda.model.dao;
 
-import com.hcl.agenda.PersistenceUtil;
-import com.hcl.agenda.mode.po.Phone;
+import com.hcl.agenda.model.po.Phone;
+import com.hcl.agenda.util.PersistenceUtil;
 
 public class PhoneDAO extends GenericDAO<Phone> {
 

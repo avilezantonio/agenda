@@ -1,4 +1,4 @@
-package com.hcl.agenda;
+package com.hcl.agenda.util;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

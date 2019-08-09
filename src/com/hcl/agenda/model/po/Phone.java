@@ -1,4 +1,4 @@
-package com.hcl.agenda.mode.po;
+package com.hcl.agenda.model.po;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,6 +24,6 @@ public class Phone {
 	
 	@ManyToOne
     @JoinColumn(name="contact_id", nullable=false)
-	private int contact;
+	private Contact contact;
 
 }
