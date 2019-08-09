@@ -1,9 +1,7 @@
 package com.hcl.agenda;
 
-import java.util.Optional;
-
-import com.hcl.agenda.mode.dao.ContactDAO;
 import com.hcl.agenda.mode.po.Contact;
+import com.hcl.agenda.model.dao.ContactDAO;
 
 public class Test {
 
@@ -11,21 +9,9 @@ public class Test {
 
 		ContactDAO contactDAO = new ContactDAO();
 
-		Contact contact = new Contact();
-		contact.setName("my contact");
-		contact.setLastName("jpa rules");
-		contact.setNick("lalals");
-
-		contactDAO.save(contact);
-
-		contact = new Contact();
-		contact.setName("other contact");
-		contact.setLastName("jpa rules");
-		contact.setNick("the trainer sucks");
-
-		contactDAO.save(contact);
-
-		Optional.ofNullable(contactDAO.getAll()).ifPresent(l -> l.forEach(c -> System.out.println(c)));
+		for (Contact c : contactDAO.getAll()) {
+			System.out.println(c);
+		}
 
 	}
 

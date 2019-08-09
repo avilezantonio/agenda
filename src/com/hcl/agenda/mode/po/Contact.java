@@ -1,16 +1,24 @@
 package com.hcl.agenda.mode.po;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import lombok.Data;
+import lombok.ToString;
 
 @Entity
+@Data
+@ToString
 public class Contact {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(name = "name")
 	private String name;
@@ -18,42 +26,7 @@ public class Contact {
 	private String lastName;
 	@Column(name = "nick_name")
 	private String nick;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getNick() {
-		return nick;
-	}
-
-	public void setNick(String nick) {
-		this.nick = nick;
-	}
-
-	@Override
-	public String toString() {
-		return "Contact [id=" + id + ", name=" + name + ", lastName=" + lastName + ", nick=" + nick + "]";
-	}
+	@OneToMany(mappedBy="contact")
+	private List<Phone> phones;
 
 }

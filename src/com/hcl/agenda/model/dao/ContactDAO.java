@@ -1,4 +1,4 @@
-package com.hcl.agenda.mode.dao;
+package com.hcl.agenda.model.dao;
 
 import com.hcl.agenda.PersistenceUtil;
 import com.hcl.agenda.mode.po.Contact;

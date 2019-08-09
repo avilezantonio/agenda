@@ -1,4 +1,4 @@
-package com.hcl.agenda.mode.dao;
+package com.hcl.agenda.model.dao;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
@@ -21,11 +21,9 @@ public class GenericDAO<T> {
 	public void save(T entity) {
 
 		Optional.ofNullable(entity).ifPresent(e -> {
-
 			entityManager.getTransaction().begin();
 			entityManager.persist(e);
 			entityManager.getTransaction().commit();
-
 		});
 
 	}
